@@ -8,7 +8,7 @@
 
 
 
-![Главное окно](https://i.postimg.cc/8zCwBcn6/main-ui1.png)
+![Главное окно](https://i.postimg.cc/C5NHbpG7/main-ui1.png)
 
 Краткое описание проекта.
 Проект состоит из 7 python файлов и 4 файла для UI/UX
