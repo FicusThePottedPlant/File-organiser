@@ -267,7 +267,7 @@ class SecondForm(QWidget, second_ui.Ui_Form):
                     self.load_table2()
         else:
             QMessageBox.information(self, 'Не выделены строку',
-                                    'Выделите строку для удалении', QMessageBox.Ok)
+                                    'Выделите строку для удаления', QMessageBox.Ok)
 
     def get_directories(self) -> dict:
         """Returns dict where types of file are keys and values are list of extension"""
