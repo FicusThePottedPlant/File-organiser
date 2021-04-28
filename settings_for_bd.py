@@ -16,6 +16,7 @@ class AddForm1(QWidget, add_extension.Ui_Form):
         self.setupUi(self)
         self.setWindowIcon(QtGui.QIcon('ui/plus.png'))
         self.setWindowModality(QtCore.Qt.WindowModality(2))
+        self.setWindowFlags(self.windowFlags() & ~QtCore.Qt.WindowCloseButtonHint)
 
 
 class AddForm2(QWidget, add_type.Ui_Form):
@@ -24,6 +25,7 @@ class AddForm2(QWidget, add_type.Ui_Form):
         self.setupUi(self)
         self.setWindowIcon(QtGui.QIcon('ui/plus.png'))
         self.setWindowModality(QtCore.Qt.WindowModality(2))
+        self.setWindowFlags(self.windowFlags() & ~QtCore.Qt.WindowCloseButtonHint)
 
 
 class SecondForm(QWidget, second_ui.Ui_Form):

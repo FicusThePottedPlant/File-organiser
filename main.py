@@ -23,7 +23,7 @@ class Main(QMainWindow, Ui_MainWindow):
         self.action_bars()
         self.setWindowIcon(QtGui.QIcon('ui/logo.png'))
         self.tabWidget.removeTab(1)  # TODO working tabs
-        self.tabWidget.removeTab(1)  # now i had deleted them to make a project done
+        self.tabWidget.removeTab(1)
         self.switch = {0: self.listWidget, 1: self.listWidget_2, 2: self.listWidget_3}
         try:
             self.second_form = SecondForm()
@@ -47,10 +47,10 @@ class Main(QMainWindow, Ui_MainWindow):
             print('''Чтобы добавить папку для сортировки нажмите +, 
 а для удаления выделите папку и нажмите -.
 Когда вы выбрали все папки, нажмите 'Начать сортировку'.
-    
+                
 Внимание! Все файлы будут перемещены в новые папки, 
 поэтому не сортируйте файлы которые зависят от их местоположения.
-
+            
 Вы также можете нажать на кнопку настройки
 для редактирования сортировки по вашему усмотрению.''')
 
@@ -86,14 +86,14 @@ class Main(QMainWindow, Ui_MainWindow):
                                         QMessageBox.Ok)
 
     def add(self):
-        """add new item in list widget by plus button"""
+        """add new item in list widget by clicking on plus button"""
         filename = QFileDialog.getExistingDirectory()
         if filename and filename not in self.data:
             self.data.append(filename)
             self.switch[self.tabWidget.currentIndex()].addItem(filename)
 
     def delete(self):
-        """delete selected row from list widget by minus button"""
+        """delete selected row from list widget by clicking on minus button"""
         for item in self.switch[self.tabWidget.currentIndex()].selectedItems():
             self.switch[self.tabWidget.currentIndex()].takeItem(self.switch[self.tabWidget.currentIndex()].row(item))
             self.data.remove(item.text())

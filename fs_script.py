@@ -39,7 +39,7 @@ class OrganiseByFiles:
 
     def create_folders(self):
         """create folders based on type of files"""
-        c = 0
+        c = 0  # count types quantity. If there are unknown file type create Другие folder
         for key in self.directories:
             for i in self.type_of_files:
                 if i in self.directories[key] and key not in os.listdir(self.to):
